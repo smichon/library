@@ -33,8 +33,8 @@ public class ReaderController {
         return mapper.mapToReaderDto(service.fetchReaderById(id).orElseThrow(ReaderNotFoundException::new));
     }
 
-    @RequestMapping(method = RequestMethod.DELETE, value = "/deleteReader")
-    public void deleteReader(@RequestParam Long id) {
+    @RequestMapping(method = RequestMethod.DELETE, value = "/deleteReader/{id}")
+    public void deleteReader(@PathVariable final Long id) {
         service.deleteById(id);
     }
 }

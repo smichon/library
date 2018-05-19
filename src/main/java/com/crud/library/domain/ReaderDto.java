@@ -1,5 +1,6 @@
 package com.crud.library.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,5 +14,5 @@ public class ReaderDto {
     private Long readerId;
     private String firstname;
     private String lastname;
-    private LocalDate acountDate;
+    private LocalDate accountDate;
 }

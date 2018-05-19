@@ -62,11 +62,10 @@ public class BookController {
     }
 
 
-    @RequestMapping(method = RequestMethod.GET, value = "/availableTitle")
+    @RequestMapping(method = RequestMethod.GET, value = "/availableTitle/{titleId}/{status}")
     public List<ItemDto> availableTitle(@PathVariable Long titleId, @PathVariable Item.Type status) {
         return mapper.mapToItemDtoList(service.itemsToBorrowQTy(titleId, status));
     }
-    /*this method does not work while testing in Postman (because of enum type)*/
 
     @RequestMapping(method = RequestMethod.GET, value = "/countItemsOfTitle/{titleId}")
     public Long countItemsOfTitle(@PathVariable Long titleId) throws TitleNotFoundException {
