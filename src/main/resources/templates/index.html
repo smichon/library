@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Library Application</title>
+</head>
+<body>
+    <h1>Library Application</h1>
+    <p>This REST API application uses Spring framework, Lombok plugin and MySQL database</p><br>
+    <p>API Documentation
+    <!--/*@thymesVar id="api_documentation" type="com.crud.library.controller.StaticWebPageController"*/-->
+        <a th:href="${api_documentation}">Swagger</a>
+    </p>
+    <p>Actuators
+        <a th:href="${info}">Info</a>
+        <a th:href="${health}">Health</a>
+        <a th:href="${mappings}">Mappings</a>
+        <a th:href="${metrics}">Metrics</a>
+    </p>
+
+</body>
+</html>
